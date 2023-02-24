@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="movie-content">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2><%= @list.name %> Movies</h2>
+      </div>
+    </div>
+
+    <hr>
+
+
+    <div class="movies-grid">
+      <% @list.movies.each do |movie| %>
+      <div class="box-poster">
+        <img class="img-poster" src="<%= movie.poster_url %>">
+        <p class="movie-path"><%= link_to movie.title, movie_path(movie) %></p>
+      </div>
+      <% end %>
+    </div>
+
+  </div>
+
+
+
+</div>
